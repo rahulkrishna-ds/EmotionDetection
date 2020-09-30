@@ -1,9 +1,11 @@
 #main.py
+from flask_ngrok import run_with_ngrok
 from flask import Flask, render_template, Response
-#from camera import VideoCamera
+from camera import VideoCamera
 
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder="templates")
+run_with_ngrok(app)
 
 @app.route('/')
 def index():
@@ -21,4 +23,4 @@ def video_feed():
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run()
