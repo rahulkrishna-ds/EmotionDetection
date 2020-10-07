@@ -8,7 +8,7 @@ The project can be braodly divided into two parts -
 
 # Steps to follow
 
-1) Extract train and test images from ```data.rar``` file.
+1) Extract train and test images from kaggle.
 2) Install dependencies using
 
    ```pip install pipenv```
